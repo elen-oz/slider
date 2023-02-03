@@ -26,6 +26,14 @@ document.addEventListener('keydown', (event) => {
   }
 });
 
+window.addEventListener('wheel', (event) => {
+  if (event.deltaY > 1) {
+    changeSlide('up');
+  } else {
+    changeSlide('down');
+  }
+});
+
 // -----
 function changeSlide(direction) {
   if (direction === 'up') {
